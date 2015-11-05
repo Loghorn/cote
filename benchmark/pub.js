@@ -26,6 +26,6 @@ console.log('sending %d per tick', perTick);
 console.log('sending %d byte messages', buf.length);
 
 function more() {
-  for (var i = 0; i < perTick; ++i) publisher.publish('test', buf);
+  for (var i = 0; i < perTick; ++i) { publisher.publish('test', buf); }
   setImmediate(more);
 }

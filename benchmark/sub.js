@@ -1,3 +1,4 @@
+/* global start */
 
 var cote = require('..')
   , program = require('commander')
@@ -56,7 +57,7 @@ subscriber.on('added', function() {
   console.log('added');
   var prev = start = Date.now();
   subscriber.on('test', function(msg){
-    if (n++ % ops == 0) {
+    if (n++ % ops === 0) {
       var ms = Date.now() - prev;
       var sec = ms / 1000;
       var persec = ops / sec | 0;
