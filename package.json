@@ -13,11 +13,7 @@
     "name": "Armagan Amcalar",
     "email": "armagan@amcalar.com"
   },
-  "licenses": [
-    {
-      "type": "MIT"
-    }
-  ],
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git://github.com/Loghorn/cote.git"
