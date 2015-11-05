@@ -4,11 +4,12 @@ var Publisher = require('../').Publisher;
 var randomPublisher = new Publisher({
     name: 'randomPub',
     // namespace: 'rnd',
-    broadcasts: ['randomUpdate']
+    broadcasts: ['randomUpdate'],
+    port: 16275 // Use a fixed port
 });
 
 // Wait for the publisher to find an open port and listen on it.
-randomPublisher.on('ready', function() {
+randomPublisher.on('ready', function () {
     setInterval(function() {
         var val = {
             val: ~~(Math.random() * 1000)
